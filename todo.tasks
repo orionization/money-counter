@@ -1,6 +1,8 @@
 Now:
-☐ pause button
-☐ reset button
+  [] add timecontrols that take timer states and add antd buttons
+    [] pause
+    [] resume
+    [] reset
 
 Later:
 ☐ form for wage input
