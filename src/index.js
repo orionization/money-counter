@@ -4,9 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import CountUp from 'react-countup';
-import Counter from './Counters/Counter.jsx';
+import Counter from './Stuff/Counter.jsx';
 import { Statistic } from 'antd';
-import TimeCounter from './Counters/TimeCounter.jsx';
+import TimeCounter from './Stuff/TimeCounter.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

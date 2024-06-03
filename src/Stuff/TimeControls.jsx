@@ -1,21 +1,24 @@
 import MoneyCounter from './MoneyCounter';
+import TimeCounter from './TimeCounter';
+import { useState } from 'react';
+import { Button } from 'antd';
 
 const TimeControls = (props) => {
-  const [isRunning, setIsRunning] = useState(false); //use later to integrate button to start counter
+  const [isRunning, setIsRunning] = useState(false);
   const [startOrPause, setStartOrPause] = useState('Start');
 
   <MoneyCounter isRunning={isRunning} startOrPause={startOrPause} />;
 
   return (
-    <button
+    <Button
+      type="default"
       onClick={() => {
         setIsRunning((prevState) => !prevState);
-        setStartOrPause((prevState) =>
-          prevState === 'Start' ? 'Pause' : 'Start'
-        );
+        setStartOrPause((prevState) => (prevState === 'Start' ? 'Pause' : 'Start'));
       }}
     >
       {startOrPause}
-    </button>
+    </Button>
   );
 };
+export default TimeControls;

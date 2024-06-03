@@ -13,7 +13,7 @@ const moneyLogic = (wage, countUpRef) => {
 
   return (
     <CountUp
-      separator=','
+      separator=","
       start={0}
       end={endingValue}
       decimals={2}
@@ -43,19 +43,13 @@ const MoneyCounter = (props) => {
     <>
       {isRunning ? (
         <Statistic
-          title='Money'
+          title="Money"
           formatter={moneyLogic(sampleWage, countUpRef)} //replace sampleWage with wage when I set that up
           prefix={'$'}
         />
       ) : (
-        <Statistic title='Money' value={0.0} prefix={'$'} />
+        <Statistic title="Money" value={0.0} prefix={'$'} />
       )}
-      <Button type='primary' onClick={handlePause}>
-        Pause
-      </Button>
-      <Button type='primary' onClick={handleResume}>
-        Resume
-      </Button>
     </>
   );
 };
