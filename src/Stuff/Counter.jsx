@@ -17,10 +17,12 @@ const Counter = () => {
       <Col span={12}>
         <TimeCounter />
       </Col>
-      <Row></Row>
-      <Col>
-        <TimeControls />
-      </Col>
+      <Col></Col>
+      <Row>
+        <Col>
+          <TimeControls />
+        </Col>
+      </Row>
       <Row></Row>
       <Col>
         <WageForm />

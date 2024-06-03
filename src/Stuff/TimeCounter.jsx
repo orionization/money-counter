@@ -1,5 +1,6 @@
 import { Statistic } from 'antd';
 import React, { useState, useEffect } from 'react';
+import TimeControls from './TimeControls';
 
 const TimeCounter = () => {
   // keep track of time

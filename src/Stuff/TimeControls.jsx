@@ -8,6 +8,7 @@ const TimeControls = (props) => {
   const [startOrPause, setStartOrPause] = useState('Start');
 
   <MoneyCounter isRunning={isRunning} startOrPause={startOrPause} />;
+  <TimeCounter isRunning={isRunning} startOrPause={startOrPause} />;
 
   return (
     <Button

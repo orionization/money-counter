@@ -1,4 +1,5 @@
 Now:
+  [] connect WageForm to MoneyCounter
   [] add timecontrols that take timer states and add antd buttons
     [] pause
     [] resume
