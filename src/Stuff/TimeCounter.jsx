@@ -1,4 +1,6 @@
+import { Statistic } from 'antd';
 import React, { useState, useEffect } from 'react';
+
 const TimeCounter = () => {
   // keep track of time
   const [time, setTime] = useState(0);
@@ -31,12 +33,16 @@ const TimeCounter = () => {
   // Milliseconds calculation
   const milliseconds = time % 100;
 
-  return (
-    <div className="timecounter-container">
-      {hours}:{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}:
-      {milliseconds.toString().padStart(2, '0')}
-    </div>
-  );
+  const formatTime = () => {
+    return (
+      <div className="timecounter-container">
+        {hours}:{minutes.toString().padStart(2, '0')}:{seconds.toString().padStart(2, '0')}:
+        {milliseconds.toString().padStart(2, '0')}
+      </div>
+    );
+  };
+
+  return <Statistic title="Time Elapsed" formatter={formatTime()} />;
 };
 
 export default TimeCounter;
