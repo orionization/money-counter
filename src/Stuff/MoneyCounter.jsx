@@ -6,7 +6,7 @@ import TimeControls from './TimeControls';
 const sampleWage = 15; // hourly rate
 const moneyLogic = (wage, countUpRef) => {
   //const { start, wage, countUpRef } = props; use later when taking form input
-
+  console.log('wage in moneycounter: ', wage);
   const ratePerSecond = (wage - wage * 0.12) / (60 * 60); //amount of money per second, second part is federal taxes
   const endingValue = 100000000; //stops the count here
   const timeToEnd = endingValue / ratePerSecond; //how many seconds does it take to get to endingValue
