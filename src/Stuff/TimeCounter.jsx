@@ -1,13 +1,12 @@
 import { Statistic } from 'antd';
 import React, { useState, useEffect } from 'react';
-import TimeControls from './TimeControls';
 
-const TimeCounter = () => {
+const TimeCounter = (props) => {
+  const { isRunning, startOrPause } = props;
   // keep track of time
   const [time, setTime] = useState(0);
 
   // state to check if counter is running or not
-  const [isRunning, setIsRunning] = useState(false); //use later with button, set initial state to false so the button can start it
 
   useEffect(() => {
     let addTenMs;
